@@ -1,7 +1,6 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {FAB} from '@rneui/base';
-import React, {useContext, useEffect, useState} from 'react';
-import {ActivityIndicator, FlatList, StyleSheet, View} from 'react-native';
+import React, {useContext} from 'react';
+import {FlatList, StyleSheet, View} from 'react-native';
 import {AppContext} from '../AppProvider';
 import EmptyComponent from '../components/EmptyComponent';
 import ListItem from '../components/ListItem';

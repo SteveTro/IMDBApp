@@ -1,13 +1,13 @@
 import {Input} from '@rneui/base';
 import axios from 'axios';
+import {debounce, differenceBy} from 'lodash';
 import React, {useCallback, useContext, useEffect, useState} from 'react';
 import {ActivityIndicator, FlatList, StyleSheet, View} from 'react-native';
-import {Movie, SearchScreenNavigationProp} from '../types';
 import Config from 'react-native-config';
+import {AppContext} from '../AppProvider';
 import EmptyComponent from '../components/EmptyComponent';
 import ListItem from '../components/ListItem';
-import {debounce, difference, differenceBy} from 'lodash';
-import {AppContext} from '../AppProvider';
+import {Movie, SearchScreenNavigationProp} from '../types';
 
 const SearchScreen = ({navigation}: SearchScreenNavigationProp) => {
   const {data} = useContext(AppContext);
