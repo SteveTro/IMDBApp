@@ -1,9 +1,4 @@
-#IMBD Sample App
-
-### Installation
-
-- add your api key in .env_sample and rename the file to .env
-- npx react-native run-(**android** | **ios**)
+# IMBD Sample App
 
 <!-- ABOUT THE PROJECT -->
 
