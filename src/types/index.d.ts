@@ -27,6 +27,27 @@ export type DetailsScreenNavigationProp = NativeStackScreenProps<
   'Details'
 >;
 
+export interface Movie {
+  id: string;
+  title: string;
+  image: string;
+  description: string;
+}
+
+export interface Rating {
+  errorMessage: string;
+  filmAffinity: string;
+  fullTitle: string;
+  imDb: string;
+  imDbId: string;
+  metacritic: string;
+  rottenTomatoes: string;
+  theMovieDb: string;
+  title: string;
+  type: string;
+  year: string;
+}
+
 export interface IContextData {
   favorites: Movie[];
   hidden: Movie[];
