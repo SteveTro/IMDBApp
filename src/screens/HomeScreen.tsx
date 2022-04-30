@@ -36,6 +36,7 @@ const HomeScreen = ({navigation}: HomeScreenNavigationProp) => {
       />
 
       <FAB
+        title={'Search Movies'}
         style={styles.fab}
         visible={true}
         placement={'right'}

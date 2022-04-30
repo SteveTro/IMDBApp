@@ -15,9 +15,21 @@ const RootNavigation = () => {
           component={SplashScreen}
           options={{headerShown: false}}
         />
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Search" component={SearchScreen} />
-        <Stack.Screen name="Details" component={DetailScreen} />
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{title: 'Your favorite movies'}}
+        />
+        <Stack.Screen
+          name="Search"
+          component={SearchScreen}
+          options={{title: 'Search movies'}}
+        />
+        <Stack.Screen
+          name="Details"
+          component={DetailScreen}
+          options={{headerTransparent: true}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
