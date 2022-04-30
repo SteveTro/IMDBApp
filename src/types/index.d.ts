@@ -26,3 +26,17 @@ export type DetailsScreenNavigationProp = NativeStackScreenProps<
   RootStackParamList,
   'Details'
 >;
+
+export interface IContextData {
+  favorites: Movie[];
+  hidden: Movie[];
+}
+
+export type IKeys = keyof IContextData;
+
+export type ContextType = {
+  data: IContextData;
+  loadItems: (data: IContextData) => void;
+  addItem: (movie: Movie, prop: IKeys) => void;
+  removeItem: (movie: Movie, prop: IKeys) => void;
+};
