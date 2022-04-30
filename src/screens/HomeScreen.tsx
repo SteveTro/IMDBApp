@@ -1,3 +1,4 @@
+import {useNetInfo} from '@react-native-community/netinfo';
 import {FAB} from '@rneui/base';
 import React, {useContext} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
@@ -7,6 +8,8 @@ import ListItem from '../components/ListItem';
 import {HomeScreenNavigationProp, Movie} from '../types';
 
 const HomeScreen = ({navigation}: HomeScreenNavigationProp) => {
+  const netInfo = useNetInfo();
+
   const {
     data: {favorites},
   } = useContext(AppContext);
@@ -36,6 +39,7 @@ const HomeScreen = ({navigation}: HomeScreenNavigationProp) => {
       />
 
       <FAB
+        disabled={!netInfo.isConnected}
         title={'Search Movies'}
         style={styles.fab}
         visible={true}
